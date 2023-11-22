@@ -6,7 +6,8 @@ body, h1, h2, h3, p, ul, li {
 
   /* Apply a simple font and background color */
   body {
-    font-family: Arial, sans-serif;
+    font-family: 'Exo 2';
+    background-image: url('https://img.freepik.com/free-photo/dotted-wall-texture_1154-676.jpg?1&w=740&t=st=1700615327~exp=1700615927~hmac=fed4fb50cdf980b369fd1586e22f9fcb0ec2b532584a06e0a40c6cf296d81f14');
     background-color: #f0f0f0;
   }
 
@@ -31,7 +32,6 @@ body, h1, h2, h3, p, ul, li {
     font-weight: bold;
     color: lightcoral; /* Change this to your desired color */
     text-decoration: none; /* Remove the underline */
-    border: 2px solid lightcoral; /* Add an outline */
   }
 
   header a:hover {
@@ -96,13 +96,25 @@ body, h1, h2, h3, p, ul, li {
 
   /* Style the images */
   img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
     display: block;
     border: 5px solid #d40000; /* Add a border of your choice of color */
     padding: 10px;
     margin: 20px 0;
-    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+
+  img:hover {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 5px solid blue; /* Add a border of your choice of color */
+    padding: 10px;
+    margin: 20px 0;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
   }
 
   /* Add a grid layout to the photo gallery */
@@ -162,9 +174,52 @@ body, h1, h2, h3, p, ul, li {
     animation: bounce 0.4s infinite;
   }
 
-  @media screen and (max-width: 768px) {
+  @media (prefers-reduced-motion: reduce) {
+    .bounce-image {
+      animation: none;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
     body {
-      font-size: 16px;
+      font-size: 18px;
+    }
+    .container {
+      width: 80%;
+      margin: 0 auto;
+    }
+    .pet-card {
+      width: 100%;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      background-color: #333;
+      color: white;
+      z-index: 100;
+      padding: 10px;
+    }
+      /* Style the images */
+    img {
+      width: 85%;
+      height: auto;
+      display: block;
+      border: 5px solid #d40000; /* Add a border of your choice of color */
+      padding: 10px;
+      margin: 20px 0;
+      border-top-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    body {
+      font-size: 20px;
     }
     .container {
       width: 80%;
@@ -186,8 +241,19 @@ body, h1, h2, h3, p, ul, li {
       z-index: 100;
       padding: 10px;
     }
+      /* Style the images */
+    img {
+      width: 70%;
+      height: auto;
+      display: block;
+      border: 5px solid #d40000; /* Add a border of your choice of color */
+      padding: 10px;
+      margin: 20px 0;
+      border-top-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+    }
   }
-  
+
 
 
 
