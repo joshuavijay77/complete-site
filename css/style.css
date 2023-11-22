@@ -176,9 +176,14 @@ body, h1, h2, h3, p, ul, li {
 
   @media (prefers-reduced-motion: reduce) {
     .bounce-image {
-      animation: 0s;
+      animation: bounce 0s infinite;
+    }
+    .gif-animation {
+      display: none;
     }
   }
+
+
 
   @media screen and (min-width: 768px) {
     body {
